@@ -1,0 +1,214 @@
+/* src/pages/QueueViewer.css */
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  /* background-color: #0a0a0a; */
+  background-color: #fdf7f1;
+  font-family: "Segoe UI", sans-serif;
+  color: #111;
+    overflow-x: hidden !important;
+}
+
+.queue-viewer-container1 {
+  width: 100%;
+  min-height: 100vh;
+  padding: 10px 60px;
+  /* background-color: #000000; */
+  background-color: #fdf7f1;
+  box-sizing: border-box;
+}
+
+.queue-viewer-container1 h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  /* color: #ffffff; */
+  color: #222;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
+
+.viewer-list1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.viewer-card1 {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 22px;
+  border-radius: 12px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  position: relative;
+}
+
+.viewer-card1:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.viewer-card-index1 {
+  position: absolute;
+  top: -14px;
+  right: 18px;
+  background: #111;
+  color: #fff;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+/* .viewer-card-name1 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 10px;
+} */
+
+.current-customer {
+  background-color: #04c71b; /* green background */
+  color: #fff !important;    /* white text */
+  font-weight: bold;
+  border: 2px solid #025002;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.current-customer .viewer-card-name1,
+.current-customer .viewer-card-eta1,
+.current-customer .status-green1 {
+  color: #fff !important;
+}
+
+
+.viewer-card-name1 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 10px;
+
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+
+.viewer-card-eta1 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.status-green1 {
+  color: #2e7d32;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.status-red1 {
+  color: #c62828;
+  font-weight: 600;
+}
+
+.viewer-card-detail1 {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.viewer-actions1 {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.delete-btn1,
+.break-btn1 {
+  padding: 8px 14px;
+  background-color: #eee;
+  color: #111;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.delete-btn1:hover {
+  background-color: #f44336;
+  color: #fff;
+  border-color: #f44336;
+}
+
+.break-btn1:hover {
+  background-color: #2196f3;
+  color: #fff;
+  border-color: #2196f3;
+}
+
+.no-customers1 {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 60px;
+  color: #777;
+}
+
+
+
+/* ────────────── Mobile Responsive (≤ 600px) ────────────── */
+@media screen and (max-width: 600px) {
+  .queue-viewer-container1 {
+    padding: 10px 16px;
+  }
+
+  .queue-viewer-container1 h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .viewer-list1 {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .viewer-card1 {
+    padding: 16px;
+  }
+
+  .viewer-card-name1 {
+    font-size: 1.5rem;
+  }
+
+  .viewer-card-eta1 {
+    font-size: 1.2rem;
+  }
+
+  .viewer-card-index1 {
+    top: -12px;
+    right: 12px;
+    font-size: 0.8rem;
+    padding: 3px 8px;
+  }
+
+  .viewer-actions1 {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .delete-btn1,
+  .break-btn1 {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  .no-customers1 {
+    font-size: 1rem;
+    margin-top: 40px;
+  }
+}

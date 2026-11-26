@@ -1,0 +1,530 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #fdf7f1; /* creamy background */
+  font-family: "Segoe UI", sans-serif;
+  color: #111;
+  overflow-x: visible !important;
+}
+
+.barber-service-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  font-family: "Segoe UI", sans-serif;
+  padding: 1.5rem;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* === Add Category Form === */
+.add-category-form {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.add-category-form input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border 0.3s;
+}
+
+.add-category-form input:focus {
+  border-color: #28a745;
+  outline: none;
+}
+
+.add-category-form button {
+  padding: 1rem 2rem;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.add-category-form button:hover {
+  background: #218838;
+}
+
+/* === Category Box === */
+.category-box {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1.2rem;
+  margin-bottom: 2rem;
+  background: #ffffff;
+  transition: box-shadow 0.2s ease;
+}
+
+.category-box:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* === Category Header === */
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.category-header h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #333;
+}
+
+.category-header button {
+  margin-left: 0.5rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+/* === Buttons === */
+.category-header button:nth-child(1) {
+  background: #007bff;
+  color: white;
+}
+
+.category-header button:nth-child(1):hover {
+  background: #0056b3;
+}
+
+.delete-btn {
+  background: #dc3545;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #c82333;
+}
+
+/* === Service List === */
+.service-list {
+  list-style: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.service-itemmm {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 0;
+  background: #f8f9fa;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 0.6rem;
+  transition: background 0.2s ease;
+}
+
+.service-itemmm:hover {
+  background: #e9ecef;
+}
+
+.service-itemmm div:first-child {
+  font-weight: 500;
+  color: #333;
+}
+
+/* === Action Buttons for Services === */
+.service-itemmm button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin-left: 0.4rem;
+  transition: color 0.2s ease;
+}
+
+.service-itemmm button:hover {
+  color: #007bff;
+}
+
+.service-itemmm button:last-child:hover {
+  color: #dc3545;
+}
+
+/* HEADER CSS */
+
+.header-wrapper {
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+}
+
+.queue-header.align-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.queue-logo {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #007bff;
+}
+
+/* HAMBURGER ICON */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+  width: 30px;
+  height: 25px;
+  z-index: 1001;
+}
+
+.hamburger div {
+  height: 3px;
+  width: 100%;
+  background-color: #333;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+.listofServices {
+  font-size: 1.5rem !important;
+  padding: 0.5rem !important;
+}
+
+/* MOBILE MENU */
+@media screen and (max-width: 1024px) {
+  .queue-header.align-header {
+    flex-direction: row !important;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 2rem;
+    gap: 1rem;
+    transform: translateY(-200%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.show {
+    transform: translateY(0%);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    color: #333;
+  }
+
+  .add-btn {
+    margin-top: 1rem;
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+
+  .queue-logo {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal-content h3 {
+  margin-top: 0;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.modal-content label {
+  font-weight: 600;
+}
+
+.modal-content input {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.btn-green {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+.btncombine {
+  display: block;
+  gap: 2 !important;
+}
+.mobilebtncombine {
+  display: none;
+  gap: 2 !important;
+}
+
+/* ========== RESPONSIVE STYLES: Tablet & Mobile ========== */
+@media screen and (max-width: 1024px) {
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #fdf7f1; /* creamy background */
+    font-family: "Segoe UI", sans-serif;
+    color: #111;
+    overflow-x: visible !important;
+  }
+
+  .barber-service-container {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  .add-category-form {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .add-category-form input {
+    font-size: 0.95rem;
+    padding: 0.6rem;
+  }
+
+  .add-category-form button {
+    font-size: 1rem;
+    padding: 0.8rem 1.2rem;
+  }
+
+  .category-header {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+
+  .category-header h3 {
+    font-size: 1.1rem;
+  }
+
+  .category-header button {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .service-itemmm {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+
+  .service-itemmm div:first-child {
+    font-size: 1rem;
+  }
+
+  .service-itemmm button {
+    font-size: 1rem;
+  }
+
+  .queue-header.align-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+  }
+
+  .add-btn {
+    font-size: 0.95rem;
+    padding: 0.6rem 1rem;
+    width: 100%;
+  }
+
+  .modal-content {
+    width: 80%;
+    padding: 1rem;
+  }
+
+  .modal-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .modal-content input {
+    font-size: 0.95rem;
+    padding: 0.6rem;
+  }
+
+  .btn-green,
+  .btn-danger {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .category-header button {
+    margin-left: 0.5rem;
+    padding: 0.4rem 0.6rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+  }
+  /* .category-header {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.9rem;
+  } */
+
+  .listofServices {
+    font-size: 1.1rem !important;
+    padding: 0.5rem !important;
+  }
+
+  .btncombine {
+    display: none;
+    gap: 2 !important;
+  }
+  .mobilebtncombine {
+    display: block;
+    gap: 2 !important;
+  }
+
+  .queue-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .hamburger {
+    display: flex;
+    top: 5% !important;
+  }
+
+  .category-header h3 {
+    font-size: 1rem;
+  }
+
+  .add-category-form input {
+    font-size: 0.9rem;
+  }
+
+  .add-category-form button {
+    font-size: 0.95rem;
+    padding: 0.7rem 1.4rem;
+  }
+
+  .service-itemmm div:first-child {
+    font-size: 0.95rem;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+  }
+
+  .modal-content h3 {
+    font-size: 1rem;
+  }
+}

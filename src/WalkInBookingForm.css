@@ -1,0 +1,147 @@
+/* === Walk-in Booking Form === */
+.walkin-form-container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  max-width: 550px;
+  width: 100%;
+  margin: 2rem auto;
+  font-family: 'Segoe UI', sans-serif;
+  border: 1px solid #eee;
+}
+
+.form-title {
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #1f1f1f;
+  text-align: center;
+}
+
+.form-section {
+  margin: 1.8rem 0;
+}
+
+.service-category {
+  margin-bottom: 1.5rem;
+}
+
+.service-category h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.6rem;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 4px;
+}
+
+.service-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 0;
+  font-size: 0.96rem;
+  color: #333;
+  cursor: pointer;
+}
+
+.service-checkbox input {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.status-msg {
+  margin-top: 1rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-align: center;
+  color: #444;
+}
+
+/* Input Field */
+.booking-input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border 0.2s ease;
+}
+
+.booking-input:focus {
+  border-color: #28a745;
+  outline: none;
+}
+
+/* Button */
+.booking-button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1.2rem;
+  background: #28a745;
+  color: white;
+  transition: background 0.3s ease;
+}
+
+.booking-button:hover {
+  background: #218838;
+}
+
+.btn-green {
+  background-color: #28a745;
+  color: white;
+}
+
+.service-checkbox input:checked + span {
+  background: #e6f8ee;
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+.step-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  gap: 10px;
+}
+
+.btn-gray {
+  background: #6c757d;
+  color: white;
+}
+
+
+/* === Responsive Scroll for Mobile === */
+@media screen and (max-width: 768px) {
+  .walkin-form-container {
+    margin: 1rem;
+    padding: 1.2rem ;
+    box-shadow: none;
+    border-radius: 8px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 75%;
+  }
+
+  .form-title {
+    font-size: 1.4rem;
+  }
+
+  .booking-button {
+    font-size: 0.95rem;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .booking-input {
+    font-size: 0.95rem;
+    padding: 8px 10px;
+    width: 95%;
+  }
+}
